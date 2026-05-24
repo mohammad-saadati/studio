@@ -1,0 +1,73 @@
+.rbg-lsc--dark {
+  --rbg-lsc-bg: #0b0e14;
+  --rbg-lsc-card: #121721;
+  --rbg-lsc-card-border: #1e2636;
+  --rbg-lsc-input-bg: #0d1118;
+  --rbg-lsc-input-border: #2a3344;
+  --rbg-lsc-text: #BBC9CD;
+  --rbg-lsc-text-muted: #8b95a8;
+  --rbg-lsc-text-dim: #BBC9CD;
+  --rbg-lsc-pair-accent: #7dd3fc;
+  --rbg-lsc-mint: #00ffa3;
+  --rbg-lsc-mint-dim: rgba(0, 255, 163, 0.15);
+  --rbg-lsc-mint-glow: rgba(0, 255, 163, 0.55);
+  --rbg-lsc-coral: #ff6b6b;
+  --rbg-lsc-warning: #ffb800;
+  --rbg-lsc-warning-border: rgba(255, 184, 0, 0.35);
+  --rbg-lsc-results-bg: linear-gradient(
+    135deg,
+    rgba(0, 255, 163, 0.12) 0%,
+    rgba(0, 255, 163, 0.04) 100%
+  );
+  --rbg-lsc-results-border: rgba(0, 255, 163, 0.2);
+  --rbg-lsc-badge-bg: rgba(0, 255, 163, 0.12);
+  --rbg-lsc-badge-text: #00ffa3;
+  --rbg-lsc-badge-border: rgba(0, 255, 163, 0.2);
+  --rbg-lsc-pill-bg: #131629;
+  --rbg-lsc-pill-border: #71737F;
+  --rbg-lsc-toggle-bg: #1a2230;
+  --rbg-lsc-toggle-border: #2a3344;
+  --rbg-lsc-slider-track: #2a3344;
+  --rbg-lsc-watermark: rgba(0, 255, 163, 0.06);
+  --rbg-lsc-warning-bg: rgba(255, 184, 0, 0.06);
+  --rbg-lsc-skeleton: #1e2636;
+  --rbg-lsc-skeleton-shine: rgba(255, 255, 255, 0.06);
+  --rbg-lsc-icon: #6b7589;
+}
+
+.rbg-lsc--light {
+  --rbg-lsc-bg: #f0f2f6;
+  --rbg-lsc-card: #ffffff;
+  --rbg-lsc-card-border: #e2e8f0;
+  --rbg-lsc-input-bg: #f8fafc;
+  --rbg-lsc-input-border: #cbd5e1;
+  --rbg-lsc-text: #131629;
+  --rbg-lsc-text-muted: #161D40;
+  --rbg-lsc-text-dim: #94a3b8;
+  --rbg-lsc-pair-accent: #0284c7;
+  --rbg-lsc-mint: #00c882;
+  --rbg-lsc-mint-dim: rgba(0, 200, 130, 0.14);
+  --rbg-lsc-mint-glow: rgba(0, 200, 130, 0.35);
+  --rbg-lsc-coral: #e11d48;
+  --rbg-lsc-warning: #ffb800;
+  --rbg-lsc-warning-border: rgba(255, 184, 0, 0.35);
+  --rbg-lsc-results-bg: linear-gradient(
+    135deg,
+    rgba(0, 200, 130, 0.14) 0%,
+    rgba(0, 200, 130, 0.05) 100%
+  );
+  --rbg-lsc-results-border: rgba(0, 180, 120, 0.25);
+  --rbg-lsc-badge-bg: rgba(0, 200, 130, 0.12);
+  --rbg-lsc-badge-text: #00a86b;
+  --rbg-lsc-badge-border: rgba(0, 168, 107, 0.25);
+  --rbg-lsc-pill-bg: #ffffff;
+  --rbg-lsc-pill-border: #D9D9D9;
+  --rbg-lsc-toggle-bg: #ffffff;
+  --rbg-lsc-toggle-border: #cbd5e1;
+  --rbg-lsc-slider-track: #e2e8f0;
+  --rbg-lsc-watermark: rgba(0, 180, 120, 0.08);
+  --rbg-lsc-warning-bg: rgba(255, 184, 0, 0.08);
+  --rbg-lsc-skeleton: #e2e8f0;
+  --rbg-lsc-skeleton-shine: rgba(255, 255, 255, 0.7);
+  --rbg-lsc-icon: #94a3b8;
+}
