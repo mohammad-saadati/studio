@@ -63,7 +63,7 @@ const fa: Record<TranslationKey, string> = {
   conservative: 'محافظه‌کار (۰.۵٪)',
   aggressive: 'تهاجمی (۵٪+)',
   resultLabel: 'حجم پیشنهادی معامله',
-  lotSizeUnit: 'LOT',
+  lotSizeUnit: 'لات',
   riskAmount: 'کل مبلغ ریسک',
   riskOfEquity: '{percent}٪ از کل سرمایه',
   riskWarningTitle: 'هشدار ریسک:',
