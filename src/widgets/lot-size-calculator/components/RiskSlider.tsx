@@ -19,7 +19,7 @@ export function RiskSlider({ lang, value, onChange }: RiskSliderProps) {
   return (
     <div className="rbg-lsc__slider-block">
       <div className="rbg-lsc__slider-header">
-        <span className="rbg-lsc__label">{t(lang, 'riskPercentage')}</span>
+        <span className="rbg-lsc-risk-slider__label">{t(lang, 'riskPercentage')}</span>
         <span className="rbg-lsc__slider-value">
           {formatNumber(value, lang, {
             minimumFractionDigits: 1,
@@ -47,8 +47,8 @@ export function RiskSlider({ lang, value, onChange }: RiskSliderProps) {
           } */}
       </div>
       <div className="rbg-lsc__slider-legend">
-        <span>{t(lang, 'conservative')}</span>
-        <span>{t(lang, 'aggressive')}</span>
+        <span className='conservative-text'>{t(lang, 'conservative')}</span>
+        <span className='aggressive-text'>{t(lang, 'aggressive')}</span>
       </div>
     </div>
   )

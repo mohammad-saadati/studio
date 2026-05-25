@@ -1,73 +1,100 @@
 .rbg-lsc--dark {
-  --rbg-lsc-bg: #0b0e14;
+  --rbg-lsc-bg: #080b14;
   --rbg-lsc-card: #121721;
+  --rbg-lsc-card-bg: #0c111e;
   --rbg-lsc-card-border: #1e2636;
   --rbg-lsc-input-bg: #0d1118;
   --rbg-lsc-input-border: #2a3344;
-  --rbg-lsc-text: #BBC9CD;
+  --rbg-lsc-text: #bbc9cd;
   --rbg-lsc-text-muted: #8b95a8;
-  --rbg-lsc-text-dim: #BBC9CD;
+  --rbg-lsc-text-muted-risk-percentage: #859397;
+  --rbg-lsc-text-dim: #bbc9cd;
+  --rbg-lsc-text-dim-note: #3C494D;
+  --rbg-lsc__slider-bg: #444653;
   --rbg-lsc-pair-accent: #7dd3fc;
   --rbg-lsc-mint: #00ffa3;
+  --rbg-lsc-slider-thumb: #57DEA3;
+  --rbg-lsc-mint-toggle-icon: #ffffff;
+  --rgb-lsc-total-risk-amount: #859397;
+  --rgb-lsc-aggressive-text: #859397;
+  --rbg-lsc-lot-label: #57DEA3;
+  --rbg-lsc-lot-label-aggresive-percentage: #57DEA3;
+  --rbg-lsc-lot-label: #57DEA3;
   --rbg-lsc-mint-dim: rgba(0, 255, 163, 0.15);
   --rbg-lsc-mint-glow: rgba(0, 255, 163, 0.55);
   --rbg-lsc-coral: #ff6b6b;
-  --rbg-lsc-warning: #ffb800;
+  --rbg-lsc-coral-total-risk-value: #FFB4AB;
+  --rbg-lsc-warning: rgba(255, 217, 98, 0.2);
+  --rbg-lsc-warning-icon: #ffd962;
   --rbg-lsc-warning-border: rgba(255, 184, 0, 0.35);
   --rbg-lsc-results-bg: linear-gradient(
     135deg,
-    rgba(0, 255, 163, 0.12) 0%,
-    rgba(0, 255, 163, 0.04) 100%
+    rgba(87, 222, 163, 0.2) 0%,
+    rgba(87, 222, 163, 0) 100%
   );
   --rbg-lsc-results-border: rgba(0, 255, 163, 0.2);
   --rbg-lsc-badge-bg: rgba(0, 255, 163, 0.12);
-  --rbg-lsc-badge-text: #00ffa3;
+  --rbg-lsc-badge-text: #57DEA3;
   --rbg-lsc-badge-border: rgba(0, 255, 163, 0.2);
   --rbg-lsc-pill-bg: #131629;
-  --rbg-lsc-pill-border: #71737F;
+  --rbg-lsc-pill-border: #71737f;
   --rbg-lsc-toggle-bg: #1a2230;
   --rbg-lsc-toggle-border: #2a3344;
   --rbg-lsc-slider-track: #2a3344;
   --rbg-lsc-watermark: rgba(0, 255, 163, 0.06);
-  --rbg-lsc-warning-bg: rgba(255, 184, 0, 0.06);
+  --rbg-lsc-warning-bg: rgba(232, 188, 0, 0.05);
   --rbg-lsc-skeleton: #1e2636;
   --rbg-lsc-skeleton-shine: rgba(255, 255, 255, 0.06);
   --rbg-lsc-icon: #6b7589;
+  --risk-description-text: #bbc9cd;
 }
 
 .rbg-lsc--light {
-  --rbg-lsc-bg: #f0f2f6;
+  --rbg-lsc-bg: #f5f7f9;
   --rbg-lsc-card: #ffffff;
+  --rbg-lsc-card-bg: #ffffff;
   --rbg-lsc-card-border: #e2e8f0;
   --rbg-lsc-input-bg: #f8fafc;
   --rbg-lsc-input-border: #cbd5e1;
   --rbg-lsc-text: #131629;
-  --rbg-lsc-text-muted: #161D40;
+  --rbg-lsc-text-muted: #161d40;
+  --rbg-lsc-text-muted-risk-percentage: #859397;
   --rbg-lsc-text-dim: #94a3b8;
+  --rbg-lsc-text-dim-note: #FAFAFA;
+  --rbg-lsc__slider-bg: #F0F0F0;
   --rbg-lsc-pair-accent: #0284c7;
-  --rbg-lsc-mint: #00c882;
+  --rbg-lsc-mint: #FAFAFA;
+  --rbg-lsc-slider-thumb: #595959;
+  --rbg-lsc-mint-toggle-icon: #000;
+  --rgb-lsc-aggressive-text: #3C494D;
+  --rgb-lsc-total-risk-amount: #FAFAFA;
+  --rbg-lsc-lot-label: #57DEA3;
+  --rbg-lsc-lot-label-aggresive-percentage: #5085FB;
   --rbg-lsc-mint-dim: rgba(0, 200, 130, 0.14);
   --rbg-lsc-mint-glow: rgba(0, 200, 130, 0.35);
   --rbg-lsc-coral: #e11d48;
-  --rbg-lsc-warning: #ffb800;
+  --rbg-lsc-coral-total-risk-value: #FFA1A4;
+  --rbg-lsc-warning: rgba(255, 183, 0, 1);
+  --rbg-lsc-warning-icon: #ffb700;
   --rbg-lsc-warning-border: rgba(255, 184, 0, 0.35);
   --rbg-lsc-results-bg: linear-gradient(
     135deg,
-    rgba(0, 200, 130, 0.14) 0%,
-    rgba(0, 200, 130, 0.05) 100%
+    rgba(43, 74, 203, 1) 0%,
+    rgba(75, 105, 231, 1) 100%
   );
   --rbg-lsc-results-border: rgba(0, 180, 120, 0.25);
-  --rbg-lsc-badge-bg: rgba(0, 200, 130, 0.12);
-  --rbg-lsc-badge-text: #00a86b;
+  --rbg-lsc-badge-bg: rgba(149, 234, 255, 0.1);
+  --rbg-lsc-badge-text: #5DC492;
   --rbg-lsc-badge-border: rgba(0, 168, 107, 0.25);
   --rbg-lsc-pill-bg: #ffffff;
-  --rbg-lsc-pill-border: #D9D9D9;
+  --rbg-lsc-pill-border: #d9d9d9;
   --rbg-lsc-toggle-bg: #ffffff;
   --rbg-lsc-toggle-border: #cbd5e1;
   --rbg-lsc-slider-track: #e2e8f0;
   --rbg-lsc-watermark: rgba(0, 180, 120, 0.08);
-  --rbg-lsc-warning-bg: rgba(255, 184, 0, 0.08);
+  --rbg-lsc-warning-bg: rgba(255, 250, 232, 1);
   --rbg-lsc-skeleton: #e2e8f0;
   --rbg-lsc-skeleton-shine: rgba(255, 255, 255, 0.7);
   --rbg-lsc-icon: #94a3b8;
+  --risk-description-text: #434343;
 }

@@ -1,9 +1,9 @@
 /* Figma: Lot Size Calc (Copy) — scoped under .rbg-lsc */
-@import './theme/tokens.css';
+@import "./theme/tokens.css";
 
 .rbg-lsc {
-  --rbg-lsc-font: 'Inter', system-ui, sans-serif;
-  --rbg-lsc-font-fa: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+  --rbg-lsc-font: "Inter", system-ui, sans-serif;
+  --rbg-lsc-font-fa: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
   --rbg-lsc-radius: 12px;
   --rbg-lsc-radius-sm: 8px;
   --rbg-lsc-transition: 0.2s ease;
@@ -18,7 +18,7 @@
   isolation: isolate;
 }
 
-.rbg-lsc[lang='fa'] {
+.rbg-lsc[lang="fa"] {
   font-family: var(--rbg-lsc-font-fa);
 }
 
@@ -186,7 +186,7 @@
   border: 1px solid var(--rbg-lsc-toggle-border);
   border-radius: 999px;
   background: var(--rbg-lsc-toggle-bg);
-  color: var(--rbg-lsc-mint);
+  color: var(--rbg-lsc-mint-toggle-icon);
   cursor: pointer;
   transition:
     border-color var(--rbg-lsc-transition),
@@ -213,9 +213,11 @@
   flex-direction: column;
   gap: 16px;
   padding: 18px;
-  background: var(--rbg-lsc-card);
+  background: var(--rbg-lsc-card-bg);
   border: 1px solid var(--rbg-lsc-card-border);
   border-radius: var(--rbg-lsc-radius);
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .rbg-lsc--short .rbg-lsc__card {
@@ -260,7 +262,7 @@
   text-transform: uppercase;
   color: var(--rbg-lsc-badge-text);
   background: var(--rbg-lsc-badge-bg);
-  border: 1px solid var(--rbg-lsc-badge-border);
+  /* border: 1px solid var(--rbg-lsc-badge-border); */
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -285,8 +287,13 @@
 .rbg-lsc__label {
   font-size: 11px;
   font-weight: 500;
-  color: var(--rbg-lsc-text-muted);
-  text-transform: uppercase;
+  color: var(--rbg-lsc-text-muted-risk-percentage);
+  letter-spacing: 0.05em;
+}
+
+.rbg-lsc-risk-slider__label {
+  font-size: 14px;
+  color: var(--rbg-lsc-text-muted-risk-percentage);
   letter-spacing: 0.05em;
 }
 
@@ -313,7 +320,7 @@
     box-shadow var(--rbg-lsc-transition);
 }
 
-.rbg-lsc[dir='rtl'] .rbg-lsc__input {
+.rbg-lsc[dir="rtl"] .rbg-lsc__input {
   padding: 12px 14px 12px 40px;
 }
 
@@ -335,6 +342,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 48px;
+  margin-top: 30px;
 }
 
 .rbg-lsc__slider-header {
@@ -351,9 +360,9 @@
 }
 
 .rbg-lsc__slider-value {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
-  color: var(--rbg-lsc-mint);
+  color: var(--rbg-lsc-lot-label-aggresive-percentage);
   font-variant-numeric: tabular-nums;
 }
 
@@ -376,10 +385,10 @@
   );
   outline: none;
   cursor: pointer;
-  background: #444653;
+  background: var(--rbg-lsc__slider-bg);
 }
 
-.rbg-lsc[dir='rtl'] .rbg-lsc__slider {
+.rbg-lsc[dir="rtl"] .rbg-lsc__slider {
   background: linear-gradient(
     to left,
     var(--rbg-lsc-mint) 0%,
@@ -387,6 +396,7 @@
     var(--rbg-lsc-slider-track) var(--rbg-lsc-slider-pct),
     var(--rbg-lsc-slider-track) 100%
   );
+  background: var(--rbg-lsc__slider-bg);
 }
 
 .rbg-lsc__slider::-webkit-slider-thumb {
@@ -395,8 +405,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--rbg-lsc-mint);
-  border: 2px solid var(--rbg-lsc-card);
+  background: var(--rbg-lsc-slider-thumb);
   box-shadow:
     0 0 14px var(--rbg-lsc-mint-glow),
     0 0 4px var(--rbg-lsc-mint-dim);
@@ -423,25 +432,31 @@
 .rbg-lsc__slider-legend {
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--rbg-lsc-text-dim);
 }
-
+.conservative-text {
+  color: #3c494d;
+}
+.aggressive-text {
+  color: var(--rgb-lsc-aggressive-text);
+}
 /* Results panel */
 .rbg-lsc__results {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   gap: 16px;
   padding: 18px 20px;
   background: var(--rbg-lsc-results-bg);
   border: 1px solid var(--rbg-lsc-results-border);
   border-radius: var(--rbg-lsc-radius-sm);
   overflow: hidden;
+  padding: 24px;
 }
 
 .rbg-lsc--narrow .rbg-lsc__results {
@@ -479,21 +494,24 @@
   text-align: start;
 }
 
-.rbg-lsc[dir='rtl'] .rbg-lsc__results-right {
+.rbg-lsc[dir="rtl"] .rbg-lsc__results-right {
   align-items: flex-start;
   text-align: start;
 }
 
 .rbg-lsc__results-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--rbg-lsc-mint);
+  margin-bottom: 16px;
 }
 
 .rbg-lsc__results-label--muted {
-  color: var(--rbg-lsc-text-muted);
+  color: var(--rgb-lsc-total-risk-amount);
 }
-
+.total-result-risk-amount {
+  margin-bottom: 0;
+}
 .rbg-lsc__lot-display {
   margin: 0;
   display: flex;
@@ -502,8 +520,8 @@
 }
 
 .rbg-lsc__lot-number {
-  font-size: clamp(32px, 6vw, 36px);
-  font-weight: 800;
+  font-size: 44px;
+  font-weight: 700;
   color: var(--rbg-lsc-mint);
   font-variant-numeric: tabular-nums;
   line-height: 1;
@@ -511,11 +529,12 @@
 }
 
 .rbg-lsc__lot-unit {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--rbg-lsc-mint);
   opacity: 0.7;
   letter-spacing: 0.04em;
+  margin-left: 8px;
 }
 
 .rbg-lsc__lot-display--empty .rbg-lsc__lot-number {
@@ -525,9 +544,9 @@
 
 .rbg-lsc__risk-value {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  color: var(--rbg-lsc-coral);
+  color: var(--rbg-lsc-coral-total-risk-value);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
 }
@@ -538,11 +557,9 @@
 }
 
 .rbg-lsc__risk-note {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 14px;
   text-transform: uppercase;
-  color: var(--rbg-lsc-text-dim);
+  color: var(--rbg-lsc-text-dim-note);
 }
 
 .rbg-lsc__inline-error {
@@ -555,7 +572,7 @@
 .rbg-lsc__warning {
   display: flex;
   gap: 10px;
-  padding: 12px 14px;
+  padding: 16px 47px 16px 16px;
   background: var(--rbg-lsc-warning-bg);
   border: 1px solid var(--rbg-lsc-warning-border);
   border-radius: var(--rbg-lsc-radius-sm);
@@ -564,8 +581,7 @@
 
 .rbg-lsc__warning-icon {
   flex-shrink: 0;
-  color: var(--rbg-lsc-warning);
-  margin-top: 2px;
+  color: var(--rbg-lsc-warning-icon);
 }
 
 .rbg-lsc__warning-text {
@@ -577,14 +593,19 @@
 
 .rbg-lsc__warning-text strong {
   display: block;
-  color: var(--rbg-lsc-warning);
-  font-size: 12px;
+  color: var(--rbg-lsc-warning-icon);
+  font-size: 14px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .rbg-lsc__warning-text p {
   margin: 0;
+  color: var(--risk-description-text);
+  font-size: 14px;
+  line-height: 200%;
+  text-align: justify;
+  letter-spacing: 0px;
 }
 
 .rbg-lsc--short .rbg-lsc__warning {

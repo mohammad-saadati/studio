@@ -200,7 +200,7 @@ export function LotSizeCalculator({ config }: LotSizeCalculatorProps) {
                   )}
                 </div>
                 <div className="rbg-lsc__results-right">
-                  <span className="rbg-lsc__results-label rbg-lsc__results-label--muted">
+                  <span className="rbg-lsc__results-label rbg-lsc__results-label--muted total-result-risk-amount">
                     {t(lang, 'riskAmount')}
                   </span>
                   {result && hasValidInput ? (

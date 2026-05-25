@@ -118,8 +118,8 @@ export function IconWarning({ className }: IconProps) {
   return (
     <svg
       className={className}
-      width="18"
-      height="18"
+      width="22"
+      height="19"
       viewBox="0 0 18 18"
       fill="none"
       aria-hidden="true"
