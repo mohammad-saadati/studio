@@ -71,7 +71,8 @@ export function LotSizeCalculator({ config }: LotSizeCalculatorProps) {
   }, [])
 
   const narrow = width < 520
-  const short = height < 420
+  const short = height < 480
+  const veryShort = height < 360
 
   const balanceNum = parseNumericInput(balance)
   const stopLossNum = parseNumericInput(stopLoss)
@@ -84,6 +85,7 @@ export function LotSizeCalculator({ config }: LotSizeCalculatorProps) {
   const layoutClass = [
     narrow ? 'rbg-lsc--narrow' : '',
     short ? 'rbg-lsc--short' : '',
+    veryShort ? 'rbg-lsc--very-short' : '',
   ]
     .filter(Boolean)
     .join(' ')
@@ -99,7 +101,12 @@ export function LotSizeCalculator({ config }: LotSizeCalculatorProps) {
     >
       <div className="rbg-lsc__inner">
         {loading ? (
-          <Skeleton lang={lang} narrow={narrow} short={short} />
+          <Skeleton
+            lang={lang}
+            narrow={narrow}
+            short={short}
+            veryShort={veryShort}
+          />
         ) : (
           <div className="rbg-lsc__content rbg-lsc__content--visible">
             <header className="rbg-lsc__header">

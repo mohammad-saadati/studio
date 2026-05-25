@@ -5,12 +5,14 @@ interface SkeletonProps {
   lang: Lang
   narrow?: boolean
   short?: boolean
+  veryShort?: boolean
 }
 
-export function Skeleton({ lang, narrow, short }: SkeletonProps) {
+export function Skeleton({ lang, narrow, short, veryShort }: SkeletonProps) {
   const layoutClass = [
     narrow ? 'rbg-lsc-skeleton--narrow' : '',
     short ? 'rbg-lsc-skeleton--short' : '',
+    veryShort ? 'rbg-lsc-skeleton--very-short' : '',
   ]
     .filter(Boolean)
     .join(' ')
