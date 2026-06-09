@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react'
 import type { Lang } from '../types'
 import { t } from '../i18n/translations'
 import { formatNumber } from '../utils/formatNumber'
@@ -14,7 +13,6 @@ interface RiskSliderProps {
 }
 
 export function RiskSlider({ lang, value, onChange }: RiskSliderProps) {
-  const percent = ((value - RISK_MIN) / (RISK_MAX - RISK_MIN)) * 100
 
   return (
     <div className="rbg-lsc__slider-block">
